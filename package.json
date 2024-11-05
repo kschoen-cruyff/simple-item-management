@@ -1,0 +1,21 @@
+{
+  "name": "Take-Home Assessment",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "packages/server",
+    "packages/client"
+  ],
+  "scripts": {
+    "backend:start": "npm run start --workspace server",
+    "ui:start": "npm run dev --workspace client",
+    "dev": "concurrently \"npm run backend:start\" \"npm run ui:start\""
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
